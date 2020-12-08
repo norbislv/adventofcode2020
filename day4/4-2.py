@@ -10,28 +10,21 @@ record=[
 0,#ecl 5
 0] #pid 6
 
-for i in passports:
-	if (i.find("byr:")!=-1):
-		record[0]=1
-	if (i.find("iyr:")!=-1):
-		record[1]=1
-	if (i.find("eyr:")!=-1):
-		record[2]=1
-	if (i.find("hgt:")!=-1):
-		record[3]=1
-	if (i.find("hcl:")!=-1):
-		record[4]=1
-	if (i.find("ecl:")!=-1):
-		record[5]=1
-	if (i.find("pid:")!=-1):
-		record[6]=1
-	if (i==''):
-		if (sum(record)==7):
-			valid+=1
-		record=[0,0,0,0,0,0,0]
+def checkByr(byr):
+	if (1920<=byr<=2002):
+		return 1
+	else:
+		return 0
 		
-if (sum(record)==7): #peedeejaa rindinja nav ''
-	valid+=1
-print valid
+def checkIyr(iyr):
+	
+
+
+#for i in passports:
+#	line = i.split()
+#	for z in line:
+#		print z
+	
+#print valid
 	
 	
